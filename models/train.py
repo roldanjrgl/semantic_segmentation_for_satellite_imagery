@@ -46,7 +46,7 @@ def train_and_validate(network='unet', encoder='resnet34', encoder_weights='imag
         train_logs = train_epoch.run(train_loader)
         valid_logs = valid_epoch.run(val_loader)
         writer.add_scalars('train', build_tensorboard_metrics(train_logs, loss_name), i)
-        writer.add_scalars('val', build_tensorboard_metrics(valid_logs, loss_name), i)
+        writer.add_scalars('validate', build_tensorboard_metrics(valid_logs, loss_name), i)
 
         if max_score < valid_logs['iou_score']:
             max_score = valid_logs['iou_score']
