@@ -1,0 +1,16 @@
+{
+    "network" : "unet",
+    "encoder_name" : "resnet34",
+    "encoder_weights" : "imagenet",
+    "dataset_name" : "landcoverai",
+    "dataset_path" : "/Users/adityaupadhyaya/Downloads/test_dataset_structure/",
+    "epochs" : 40,
+    "batch_size" : 32,
+    "activation_fn" : "softmax",
+    "loss_fn" : "focal_loss",
+    "lr" : 0.0001,
+    "device" : "cpu",
+    "model_out_path" : "/Users/adityaupadhyaya/Downloads/",
+    "log_out_path" : "/Users/adityaupadhyaya/Downloads/"
+}
+
