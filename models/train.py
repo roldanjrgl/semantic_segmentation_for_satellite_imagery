@@ -25,7 +25,7 @@ def train_and_validate(network='unet', encoder='resnet34', encoder_weights='imag
     ds_info = get_data_info(dataset_name, dataset_path)
 
     train_loader = load_data(ds_info, "train", batch_size=batch)
-    val_loader = load_data(ds_info, "val", batch_size=batch)    
+    val_loader = load_data(ds_info, "validate", batch_size=batch)    
 
     model = smp.Unet(encoder_name=encoder, encoder_weights=encoder_weights, classes=len(ds_info.class_names), activation=act)
     loss = get_loss_function(loss_name)
