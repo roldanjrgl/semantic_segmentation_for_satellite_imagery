@@ -27,7 +27,12 @@ def train_and_validate(network='unet', encoder='resnet34', encoder_weights='imag
     train_loader = load_data(ds_info, "train", batch_size=batch)
     val_loader = load_data(ds_info, "validate", batch_size=batch)    
 
-    model = smp.Unet(encoder_name=encoder, encoder_weights=encoder_weights, classes=len(ds_info.class_names), activation=act)
+    if network == "unet":
+        model = smp.Unet(encoder_name=encoder, encoder_weights=encoder_weights, classes=len(ds_info.class_names), activation=act)
+    elif network == "unet++":
+        model = smp.UnetPlusPlus(encoder_name=encoder, encoder_weights=encoder_weights, classes=len(ds_info.class_names), activation=act)
+    else:
+        raise ValueError("Unrecognized Network Name")
     loss = get_loss_function(loss_name)
 
     metrics = get_metrics_to_capture()
