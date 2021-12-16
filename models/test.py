@@ -1,4 +1,4 @@
-from data.datasets import *
+_pathfrom data.datasets import *
 from data.dataloader import *
 from helpers.utils import *
 
@@ -34,7 +34,8 @@ def test(network='unet', encoder='resnet34', encoder_weights='imagenet', dataset
         raise ValueError("Unrecognized Network Name")
     loss = get_loss_function(loss_name)
 
-    model.load_state_dict(torch.load(model))
+    metrics = get_metrics_to_capture()
+    model.load_state_dict(torch.load(model_path))
     model.to(device)
 
     test_epoch = smp.utils.train.ValidEpoch(model,loss=loss,metrics=metrics,device=device,verbose=True)
