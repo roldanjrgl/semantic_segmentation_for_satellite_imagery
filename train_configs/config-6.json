@@ -1,0 +1,17 @@
+{
+    "network" : "unet",
+    "encoder_name" : "resnet18",
+    "encoder_weights" : "imagenet",
+    "dataset_name" : "landcoverai",
+    "dataset_path" : "/scratch/nn2163/cv/semantic_datasets2/landcover/11/",
+    "epochs" : 50,
+    "batch_size" : 32,
+    "activation_fn" : "softmax",
+    "loss_fn" : "cross_entropy_loss",
+    "lr" : 0.0001,
+    "device" : "cuda",
+    "model_out_path" : "/scratch/nn2163/cv/semantic_datasets2/landcover/11/nn2163-resnet18-cross_entropy_loss-50epoch-ds11.pth",
+    "log_out_path" : "/scratch/nn2163/cv/au2056_testing"
+}
+
+
