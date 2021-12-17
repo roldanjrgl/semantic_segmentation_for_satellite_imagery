@@ -1,1 +1,1 @@
-# semantic_segmentation_for_satellite_imagery
+# Semantic Segmentation for Satellite Imagery
