@@ -27,4 +27,5 @@ Breakdown of a config file
     13. log_out_path - path to store tensorboard logs.
 
 
+A Sample image with the actual image on the left, the target mask in the middle, and the predicted mask on the right.
 ![alt text](https://github.com/roldanjrgl/semantic_segmentation_for_satellite_imagery/blob/main/samples/sample-1.png?raw=true)
