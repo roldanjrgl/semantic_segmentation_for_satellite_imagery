@@ -25,3 +25,6 @@ Breakdown of a config file
     11. device - either one of cuda/cpu
     12. model_out_path - path where we want to save the model (training) or where we want to load the model from (testing)
     13. log_out_path - path to store tensorboard logs.
+
+
+![alt text](https://github.com/roldanjrgl/semantic_segmentation_for_satellite_imagery/blob/main//samples/sample-1?raw=true)
