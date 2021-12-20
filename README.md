@@ -6,8 +6,8 @@ Our entire training and testing pipeline is governed by a configuration file pro
     2. driver.py is the entry point for our training/testing. The script runs in two modes - "train" and "test".
     3. Command to start training/test = "python driver.py mode <path-to-config-file>"
     
-
 Breakdown of a config file
+
     1. network - model that we want to train on. Either one of "unet" or "unet++".
     2. encoder_name - backbone of the model. Examples include - "resnet18", "resnet34", "resnet50", "resnet101".
     3. encoder_weights - weights used to initialize the encoder.
