@@ -1,5 +1,7 @@
 # Semantic Segmentation for Satellite Imagery
 
+The package data_preprocessing contains all the scripts we used to collect raw datasets from landcoverai, landcovernet, and ghanacropcover datasets. It also contains the code to clean up the images and generate RGB masks for each source.
+
 Our entire training and testing pipeline is governed by a configuration file provided as an input. The configuration file contains info regarding the model, weight initialization, hyperparameters, and the path to dataset that we want to train/test.
 
     1. config.json files contain all the configuration required for a particular run.
