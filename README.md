@@ -1,6 +1,8 @@
 # Semantic Segmentation for Satellite Imagery
 
-The package data_preprocessing contains all the scripts we used to collect raw datasets from landcoverai, landcovernet, and ghanacropcover datasets. It also contains the code to clean up the images and generate RGB masks for each source.
+The module data_preprocessing contains all the scripts we used to collect raw datasets from landcoverai, landcovernet, and ghanacropcover datasets. It also contains the code to clean up the images and generate RGB masks for each source.
+
+The module data_generator contains all our code to restructure and augment the raw dataset. As part of restructuring, we create train/test/valdiation splits and segregate source images and target masks into different folders. All the datasets follow the same nomenclature and we augment each dataset using PyTorch transformations.
 
 Our entire training and testing pipeline is governed by a configuration file provided as an input. The configuration file contains info regarding the model, weight initialization, hyperparameters, and the path to dataset that we want to train/test.
 
